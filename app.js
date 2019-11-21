@@ -35,24 +35,11 @@ const fetchApi = async urlApi => {
     //console.log(data[1].location);
     //return data;
     data.map(element => {
-      //   console.log(element.location);
+      console.log(element.location);
     });
   } catch (error) {
     return error;
   }
 };
 
-const ahoraSi = async urlApi => {
-  const { a = "", b = "", c = "", d = "", e = {}, f } = await fetchApi(urlApi);
-  console.log(a);
-};
-
-ahoraSi(urlApi);
-/* const {
-  id = "",
-  place_id = "",
-  name = "",
-  cre_id = "",
-  location = [],
-  gas_price
-} = fetchApi(urlApi); */
+fetchApi(urlApi);
