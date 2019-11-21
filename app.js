@@ -1,3 +1,4 @@
+
 let root = document.getElementById("map");
 //Crear funcion y promesa que obtenga la geolocalizacion del usuario por medio de Api Geolocation y
 //  la muestre en un mapa dinamico de Google Maps por medio de Api MapsJAvascript
@@ -25,3 +26,12 @@ function getMap(position) {
     });
 
 };
+
+fetch('./gaso.json')
+.then(response => response.json())
+.then(data => {
+  console.log(data) // Prints result from `response.json()` in getRequest
+})
+.catch(error => console.error(error))
+
+
