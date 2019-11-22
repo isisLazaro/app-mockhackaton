@@ -53,7 +53,7 @@ const initMap = (obj, locationsInfo) => {
   });
   let input = document.getElementById("pac-input");
   let searchBox = new google.maps.places.SearchBox(input);
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+  // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
   map.addListener("bounds_changed", function() {
     searchBox.setBounds(map.getBounds());
   });
