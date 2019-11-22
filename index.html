@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQQn_PJV-08K-88MZzU-FwXis7UleC380&callback=initMap"></script>
 </head>
@@ -15,15 +16,17 @@
         <div class="header-bar">
             <figure><img src="./img/png/001-filter.png" alt="filtrar" class="icon-png"></figure>
             <input type="search" class="input-search" placeholder="Buscar lugar o dirección">
-            <button type="button"><img src="./img/png/002-list.png" alt="filtrar" class="icon-png"></button>
+            <button type="button" id="button-change"><img src="./img/png/002-list.png" alt="filtrar" class="icon-png" id="list-image"><img src="./img/png/007-map.png" alt="mapa" class="icon-png hidde-section" id="map-image"></button>
 
         </div>
     </header>
     <main>
+
     <section class="map-section">
     <div id="map" class="map-container">Cargando...</div>
     </section>
-    <section class="list-section">
+
+    <section id="list-section" class="list-section hidde-section">
         <div class="filters-bar">
             <select name="price" id="price-select" class="select-filter">
                  <option selected disabled>Precio</option>
@@ -67,10 +70,87 @@
                     <option value="near">Cerca</option> 
             </select>
         </div>
+<div class="items-gas-container">
+        <div class="item-company-container">
+            <figure class="logo-container"><img src="./img/logos/pemex1.png" alt="pemex"></figure>
+            <div class="data-company-container">
+                <h2 class="title-company">Pemex</h2>
+                <p class="adress">Yucatán 155 Col. Roma</p>
+                <figure class="rating-container"><img src="./img/png/011-rating.png" alt="puntaje" class="rating"></figure> <p class="number-rating">4</p>
+            <br>
+                <img src="./img/png/009-toilet.png" alt="sanitario" class="icon-service"> <img src="./img/png/010-burger.png" alt="tienda" class="icon-service">
+            </div>
+            <div class="container-price">
+                <h2 class="price-gasoline">$20.27</h2>
+                <p class="update-time">Hace 4 hrs</p>
+                <img src="./img/png/003-user.png" alt="usuario" class="update-user"> <p class="name-user">María</p>
+            </div>
+        </div>
+
+        <div class="item-company-container">
+            <figure class="logo-container"><img src="./img/logos/gasored (1).png" alt="gasored" style="margin-top: 30px; width: 22vw; margin-left: 5px;"></figure>
+            <div class="data-company-container">
+                <h2 class="title-company">Gasored</h2>
+                <p class="adress">Sonora 130 Col. Roma</p>
+                <figure class="rating-container"><img src="./img/png/011-rating.png" alt="puntaje" class="rating"></figure> <p class="number-rating">4</p>
+            <br>
+                <img src="./img/png/009-toilet.png" alt="sanitario" class="icon-service"> 
+            </div>
+            <div class="container-price">
+                <h2 class="price-gasoline">$20.73</h2>
+                <p class="update-time">Hace 2 hrs</p>
+                <img src="./img/png/003-user.png" alt="usuario" class="update-user"> <p class="name-user">Juan</p>
+            </div>
+        </div>
+
+        <div class="item-company-container">
+            <figure class="logo-container"><img src="./img/logos/oxxogas (1).png" alt="oxxogas" style="width: 22vw; margin-left: 5px; margin-top: 7px;"></figure>
+            <div class="data-company-container">
+                <h2 class="title-company">Oxxogas</h2>
+                <p class="adress">Mérida 314 Col. Roma</p>
+                <figure class="rating-container"><img src="./img/png/011-rating.png" alt="puntaje" class="rating"></figure> <p class="number-rating">4</p>
+            <br>
+                <img src="./img/png/009-toilet.png" alt="sanitario" class="icon-service"> 
+            </div>
+            <div class="container-price">
+                <h2 class="price-gasoline">$20.87</h2>
+                <p class="update-time">Hace 3 hrs</p>
+                <img src="./img/png/003-user.png" alt="usuario" class="update-user"> <p class="name-user">Car46</p>
+            </div>
+        </div>
 
         <div class="item-company-container">
             <figure class="logo-container"><img src="./img/logos/bp-3.svg" alt="BP"></figure>
+            <div class="data-company-container">
+                <h2 class="title-company">BP</h2>
+                <p class="adress">Durango 15 Col. Roma</p>
+                <figure class="rating-container"><img src="./img/png/011-rating.png" alt="puntaje" class="rating"></figure> <p class="number-rating">4</p>
+            <br>
+                <img src="./img/png/009-toilet.png" alt="sanitario" class="icon-service">
+            </div>
+            <div class="container-price">
+                <h2 class="price-gasoline">$20.87</h2>
+                <p class="update-time">Hace 1 hrs</p>
+                <img src="./img/png/003-user.png" alt="usuario" class="update-user"> <p class="name-user">Gloria</p>
+            </div>
         </div>
+
+        <div class="item-company-container">
+            <figure class="logo-container"><img src="./img/logos/shell-3.svg" alt="shell"></figure>
+            <div class="data-company-container">
+                <h2 class="title-company">Shell</h2>
+                <p class="adress">Nayarit 550 Col. Roma</p>
+                <figure class="rating-container"><img src="./img/png/011-rating.png" alt="puntaje" class="rating"></figure> <p class="number-rating">4</p>
+            <br>
+                <img src="./img/png/009-toilet.png" alt="sanitario" class="icon-service"> 
+            </div>
+            <div class="container-price">
+                <h2 class="price-gasoline">$20.99</h2>
+                <p class="update-time">Hace 4 hrs</p>
+                <img src="./img/png/003-user.png" alt="usuario" class="update-user"> <p class="name-user">Sergio</p>
+            </div>
+        </div>
+</div>
     </section>
     </main>
     <footer>

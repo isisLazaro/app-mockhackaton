@@ -7,13 +7,15 @@
 html,
 body {
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     height: 100vh;
     width: 100vw;
+    line-height : 15px;
+    color:rgb(64, 77, 77);
 }
 
 section {
-    height: 80vh;
+    /* height: 80vh; */
     width: 100vw;
     overflow: hidden;
 }
@@ -26,6 +28,11 @@ button{
 
 select{
     outline: none;
+}
+
+header{
+    position: fixed;
+    z-index: 100;
 }
 
 
@@ -72,11 +79,19 @@ select{
     display: flex;
     width: 100vw;
     height: 80vh;
+    margin-top: 10vh;
 }
 
 footer{
     height: 10vh;
     overflow: hidden;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 511px;
+}
+
+.items-gas-container{
+    overflow: scroll;
 }
 
 .menu-item{
@@ -85,6 +100,7 @@ footer{
     text-align: center;
     padding-top: 5px;
     color: #0091B0;
+    
 }
 
 .menu-item p{
@@ -100,14 +116,12 @@ footer{
     width: 30px;
 }
 
-/* .list-section{
-} */
-
 .filters-bar{
     height: 10vh;
-    width: 164vw;
+    width: 100vw;
     background-color: #0091B0;
     overflow: scroll;
+    margin-top: 10vh;
 }
 
 .select-filter{
@@ -124,17 +138,93 @@ footer{
 .item-company-container{
     width: 95vw;
     height: 100px;
-    background-color: black;
+    background-color:#FFFFFF;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 7px #0091B0;
+    padding: 11px 0px;
 }
 
 .logo-container{
-    width: 25vw;
+    width: 24vw;
+    float: left;
 }
 
 .logo-container img{
     width: inherit;
 }
+
+.data-company-container{
+    height: inherit;
+    width: 67vw;
+    padding-left: 83px;
+    float: left;
+    position: absolute;
+}
+
+.title-company{
+    color: #0091B0;
+    font-weight: 700;
+}
+
+.adress{
+    font-size: 10px;
+    font-weight: 500;
+    color: rgb(64, 77, 77);
+}
+
+.rating-container{
+    float: left;
+    width: 30vw;
+}
+
+.rating{
+    width: inherit;
+}
+
+.number-rating{
+    color:rgb(64, 77, 77);
+    margin-top: 3px;
+    margin-left: 101px;
+    font-weight: 500;
+}
+
+.icon-service{
+    width: 20px;
+}
+
+.container-price{
+    position: absolute;
+    left: 225px;
+    text-align: right;
+}
+
+.price-gasoline{
+    color: #0091B0;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.update-time{
+    font-size: 10px;
+}
+
+.update-user{
+    width: 17px;
+    float: left;
+    margin-top: 37px;
+}
+
+.name-user{
+    font-size: 13px;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 37px;
+}
+
+.hidde-section{
+    display: none;
+  }

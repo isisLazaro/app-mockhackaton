@@ -100,3 +100,4 @@ window.addEventListener("load", getLocations);
 function noGet() {
   alert("Porfavor habilita el permiso para compartir ubicación");
 }
+
