@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* max-width: 1800px; */
 }
 
 html,
@@ -11,11 +10,131 @@ body {
     overflow-x: hidden;
     height: 100vh;
     width: 100vw;
-    /* max-width: 1800px; */
 }
 
-#map {
+section {
+    height: 80vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+button{
+    background-color: transparent;
+    border: transparent;
+    outline: none;
+}
+
+select{
+    outline: none;
+}
+
+
+.header-bar{
+    height: 10vh;
+    width: 100vw;
+    background-color: #0091B0;
+}
+
+.icon-png{
+    width: 9vw;
+    margin-left: 12px;
+    margin-top: 15px;
+    float: left;
+}
+
+.input-search{
+    margin-top: 2.5vh;
+    margin-left: 11px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #095A6B;
+    height: 29px;
+    width: 67vw;
+    color: #FFFFFF;
+    padding-left: 17px;
+    float: left;
+}
+
+
+::-webkit-input-placeholder { color: rgba(255, 255, 255, 1); } 
+
+:-ms-input-placeholder { color: rgba(255, 255, 255, 1)d; }
+
+::-webkit-input-placeholder { color: rgba(255, 255, 255, 1); } 
+ 
+:-moz-placeholder { /* Firefox 18- */ color: rgba(255, 255, 255, 1); } 
+ 
+::-moz-placeholder { /* Firefox 19+ */ color: rgba(255, 255, 255, 1); } 
+ 
+:-ms-input-placeholder { color: rgba(255, 255, 255, 1); }
+
+.map-container {
     display: flex;
     width: 100vw;
     height: 80vh;
+}
+
+footer{
+    height: 10vh;
+    overflow: hidden;
+}
+
+.menu-item{
+    float: left;
+    width: 25vw;
+    text-align: center;
+    padding-top: 5px;
+    color: #0091B0;
+}
+
+.menu-item p{
+    font-size: 3.5vw;
+}
+
+.menu-item:hover{
+    background-color: rgba(0, 144, 176, 0.568);
+    color: #FFFFFF;
+}
+
+.icon-menu{
+    width: 30px;
+}
+
+/* .list-section{
+} */
+
+.filters-bar{
+    height: 10vh;
+    width: 164vw;
+    background-color: #0091B0;
+    overflow: scroll;
+}
+
+.select-filter{
+    width: 97px;
+    border: solid 1px #FFFFFF;
+    height: 7vh;
+    color: #FFFFFF;
+    background-color: #0091B0;
+    float: left;
+    border-radius: 5px;
+    margin: 9px 3px 0 3px;
+}
+
+.item-company-container{
+    width: 95vw;
+    height: 100px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo-container{
+    width: 25vw;
+}
+
+.logo-container img{
+    width: inherit;
 }

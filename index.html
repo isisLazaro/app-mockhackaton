@@ -11,10 +11,74 @@
 </head>
 
 <body>
-    <div id="map">
+    <header >
+        <div class="header-bar">
+            <figure><img src="./img/png/001-filter.png" alt="filtrar" class="icon-png"></figure>
+            <input type="search" class="input-search" placeholder="Buscar lugar o dirección">
+            <button type="button"><img src="./img/png/002-list.png" alt="filtrar" class="icon-png"></button>
 
-    </div>
+        </div>
+    </header>
+    <main>
+    <section class="map-section">
+    <div id="map" class="map-container"></div>
+    </section>
+    <section class="list-section">
+        <div class="filters-bar">
+            <select name="price" id="price-select" class="select-filter">
+                 <option selected disabled>Precio</option>
+                 <option value="least">De menor a mayor</option> 
+                 <option value="greatest">De mayor a menor</option> 
+            </select>
 
+            <select name="type" id="type-select" class="select-filter">
+                <option selected disabled>Tipo</option>
+                <option value="magna">Magna</option> 
+                <option value="premium">Premium</option>
+                <option value="diesel">Diésel</option> 
+             </select>
+
+            <select name="company" id="brand-select" class="select-filter">
+                <option selected disabled>Empresa</option>
+                <option value="pemex">Pemex</option> 
+                <option value="oxxogas">Oxxogas</option> 
+                <option value="gasored">Gasored</option> 
+                <option value="petro7">Petro-7</option> 
+                <option value="hidrosina">Hidrosina</option> 
+                <option value="orsan">Orsan</option> 
+                <option value="redco">Redco</option> 
+                <option value="grupoeco">Grupoeco</option>
+                <option value="gasmart">Gasmart</option>  
+                <option value="shell">Shell</option> 
+            </select>
+
+            <select name="services" id="services-select" class="select-filter">
+                <option selected disabled>Servicios</option>
+                <option value="air">Aire</option> 
+                <option value="water">Agua</option>
+                <option value="vacuum">Aspirado</option> 
+                <option value="toilet">Baños</option> 
+                <option value="parking">Estacionamiento</option> 
+                <option value="store">Tienda</option> 
+            </select>
+
+            <select name="distance" id="distance-select" class="select-filter">
+                    <option selected disabled>Distancia</option>
+                    <option value="near">Cerca</option> 
+            </select>
+        </div>
+
+        <div class="item-company-container">
+            <figure class="logo-container"><img src="./img/logos/bp-3.svg" alt="BP"></figure>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <button type="button" class="menu-item"><figure><img src="./img/png/003-user.png" alt="Perfil" class="icon-menu"><p>Perfil</p></figure></button>
+        <button type="button" class="menu-item"><figure><img src="./img/png/004-heart.png" alt="Perfil" class="icon-menu"><p>Favoritos</p></button>
+        <button type="button" class="menu-item"><figure><img src="./img/png/005-fuel.png" alt="Perfil" class="icon-menu"><p>Gasolineras</p></button>
+        <button type="button" class="menu-item"><figure><img src="./img/png/006-cup.png" alt="Perfil" class="icon-menu"><p>Recompensas</p></button>
+    </footer>
 
 
     <script type="text/javascript" src="app.js"></script>
