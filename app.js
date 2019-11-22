@@ -51,24 +51,24 @@ const initMap = (obj, locationsInfo) => {
         zoomControl: true,
         scaleControl: true
     });
-    console.log(locationsInfo);
+    // console.log(locationsInfo);
 
     // let nameStation = locationsInfo.map(station => {
-    //     return station.name
+    //     return station.price
     // })
-    // let contentString = '<div id="content">' +
-    //     '<h1 id="firstHeading" class="firstHeading">' +
-    //     nameStation +
-    //     '</h1>' +
-    //     '<div id="bodyContent">' +
-    //     '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-    //     '</p>' +
-    //     '</div>' +
-    //     '</div>';
+    let contentString = '<div id="content">' +
+        '<h1 id="firstHeading" class="firstHeading">' +
+        'nameStation' +
+        '</h1>' +
+        '<div id="bodyContent">' +
+        '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+        '</p>' +
+        '</div>' +
+        '</div>';
 
-    // let infowindow = new google.maps.InfoWindow({
-    //     content: contentString
-    // });
+    let infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
     let icon = {
         url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
@@ -83,12 +83,16 @@ const initMap = (obj, locationsInfo) => {
     });
     marker.setMap(map);
 
+    console.log(locationsInfo)
     let markers = locationsInfo.map(place => {
         return new google.maps.Marker({
             position: place.position,
             map: map,
-            title: place.name
-        });
+            title: (place.price != undefined) ? place.name + ' $ ' + place.price : place.name + ' Sin precio'
+        })
+    })
+    google.maps.event.addListener(markers, 'click', function() {
+        infowindow.open(map, markers);
     });
     // markers.addListener('click', function() {
     //     infowindow.open(map, markers);
