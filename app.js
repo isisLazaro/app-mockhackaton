@@ -76,25 +76,26 @@ const initMap = (obj, locationsInfo) => {
         anchor: new google.maps.Point(0, 0) // anchor
     };
 
-    let marker = new google.maps.Marker({
+    let mymarker = new google.maps.Marker({
         position: obj,
         title: "Tu ubicacion",
         icon: icon
     });
-    marker.setMap(map);
+    mymarker.setMap(map);
 
     // console.log(locationsInfo)
     let markers = locationsInfo.map(place => {
-        return new google.maps.Marker({
+        let marker = new google.maps.Marker({
             position: place.position,
             map: map,
             title: (place.price != undefined) ? place.name + ' $ ' + place.price : place.name + ' Sin precio'
         })
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
     })
 
-    marker.addListener('click', function() {
-        infowindow.open(map, marker);
-    });
+
 };
 
 window.addEventListener("load", getLocations);
