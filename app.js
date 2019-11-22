@@ -5,21 +5,34 @@ const getLocations = () => {
         .then(response => response.json())
         .then(locations => {
             let locationsInfo = [];
-            // console.log(locations.station)
+            // console.log(locations)
             locations.forEach(station => {
-                let locationData = {
-                    position: {
-                        lat: Number(station.location.y),
-                        lng: Number(station.location.x)
-                    },
-                    name: station.name
-                        // type: station.gas_price.type,
-                        // price: station.gas_price.$t
-                };
-                locationsInfo.push(locationData);
-            });
-            // setTimeout(console.log(locationData), 3000)
+                // console.log('antes del if', station);
+                if (station.gas_price) {
+                    let locationData = {
+                        position: {
+                            lat: Number(station.location.y),
+                            lng: Number(station.location.x)
+                        },
+                        name: station.name,
+                        price: station.gas_price.$t,
+                        type: station.gas_price.type
+                    };
+                    locationsInfo.push(locationData);
 
+                } else {
+                    let locationData = {
+                        position: {
+                            lat: Number(station.location.y),
+                            lng: Number(station.location.x)
+                        },
+                        name: station.name
+                    };
+                    locationsInfo.push(locationData);
+                }
+                // console.log('despues del if', station);
+
+            });
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(data => {
                     let currentPosition = {
@@ -37,6 +50,7 @@ const initMap = (obj, locationsInfo) => {
         zoom: 15,
         center: obj
     });
+    console.log(locationsInfo)
 
     // let nameStation = locationsInfo.map(station => {
     //     return station.name

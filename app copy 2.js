@@ -5,7 +5,7 @@ const getLocations = () => {
         .then(response => response.json())
         .then(locations => {
             let locationsInfo = [];
-            // console.log(locations.station)
+            console.log(locations)
             locations.forEach(station => {
                 let locationData = {
                     position: {
