@@ -10,13 +10,15 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQQn_PJV-08K-88MZzU-FwXis7UleC380&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzNftGcpmDALYG2oQhe3BISOfq67gPacE&libraries=places&callback=initMap"
+         async defer></script>
 </head>
 
 <body>
     <header>
         <div class="header-bar">
             <figure><img src="./img/png/001-filter.png" alt="filtrar" class="icon-png"></figure>
-            <input type="search" class="input-search" placeholder="Buscar lugar o dirección">
+            <input type="search" id="pac-input" class="input-search controls" placeholder="Buscar lugar o dirección">
             <button type="button" id="button-change"><img src="./img/png/002-list.png" alt="filtrar" class="icon-png" id="list-image"><img src="./img/png/007-map.png" alt="mapa" class="icon-png hidde-section" id="map-image"></button>
 
         </div>
