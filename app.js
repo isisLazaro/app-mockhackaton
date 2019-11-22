@@ -50,7 +50,7 @@ const initMap = (obj, locationsInfo) => {
         zoom: 15,
         center: obj
     });
-    console.log(locationsInfo)
+    // console.log(locationsInfo)
 
     // let nameStation = locationsInfo.map(station => {
     //     return station.name
