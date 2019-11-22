@@ -83,7 +83,7 @@ const initMap = (obj, locationsInfo) => {
     });
     marker.setMap(map);
 
-    console.log(locationsInfo)
+    // console.log(locationsInfo)
     let markers = locationsInfo.map(place => {
         return new google.maps.Marker({
             position: place.position,
@@ -91,12 +91,10 @@ const initMap = (obj, locationsInfo) => {
             title: (place.price != undefined) ? place.name + ' $ ' + place.price : place.name + ' Sin precio'
         })
     })
-    google.maps.event.addListener(markers, 'click', function() {
-        infowindow.open(map, markers);
+
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
     });
-    // markers.addListener('click', function() {
-    //     infowindow.open(map, markers);
-    // });
 };
 
 window.addEventListener("load", getLocations);
