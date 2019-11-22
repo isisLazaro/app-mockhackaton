@@ -55,3 +55,18 @@ window.addEventListener("load", getLocations);
 function noGet() {
     alert("Porfavor habilita el permiso para compartir ubicación");
 }
+
+const mapSection = document.getElementById("map-section");
+const listSection = document.getElementById("list-section");
+const buttonChangeSection = document.getElementById("button-change");
+const mapImage = document.getElementById("map-image");
+const listImage = document.getElementById("list-image");
+
+const changeSection = () => {
+    mapSection.classList.add("hidde-section");
+    listSection.classList.remove("hidde-section");
+    listImage.classList.add("hidde-section");
+    mapImage.classList.remove("hidde-section");
+}
+
+  buttonChangeSection.addEventListener('click', changeSection);
