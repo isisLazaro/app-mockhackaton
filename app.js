@@ -58,7 +58,7 @@ const initMap = (obj, locationsInfo) => {
     // })
     let contentString = '<div id="content">' +
         '<h1 id="firstHeading" class="firstHeading">' +
-        'nameStation' +
+        'ggg' +
         '</h1>' +
         '<div id="bodyContent">' +
         '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
