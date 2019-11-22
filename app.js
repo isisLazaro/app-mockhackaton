@@ -69,8 +69,15 @@ const initMap = (obj, locationsInfo) => {
   // let infowindow = new google.maps.InfoWindow({
   //     content: contentString
   // });
-  let icon = {
+  const icon = {
     url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png", // url
+    scaledSize: new google.maps.Size(50, 50), // scaled size
+    origin: new google.maps.Point(0, 0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+  };
+
+  const iconGas = {
+    url: "./icons/fuel(1).png",
     scaledSize: new google.maps.Size(50, 50), // scaled size
     origin: new google.maps.Point(0, 0), // origin
     anchor: new google.maps.Point(0, 0) // anchor
@@ -87,7 +94,8 @@ const initMap = (obj, locationsInfo) => {
     return new google.maps.Marker({
       position: place.position,
       map: map,
-      title: place.name
+      title: place.name,
+      icon: iconGas
     });
   });
   // markers.addListener('click', function() {
@@ -107,9 +115,9 @@ const buttonChangeSection = document.getElementById("button-change");
 const mapImage = document.getElementById("map-image");
 const listImage = document.getElementById("list-image");
 const changeSection = () => {
-    mapSection.classList.add("hidde-section");
-    listSection.classList.remove("hidde-section");
-    listImage.classList.add("hidde-section");
-    mapImage.classList.remove("hidde-section");
-}
-  buttonChangeSection.addEventListener('click', changeSection);
+  mapSection.classList.add("hidde-section");
+  listSection.classList.remove("hidde-section");
+  listImage.classList.add("hidde-section");
+  mapImage.classList.remove("hidde-section");
+};
+buttonChangeSection.addEventListener("click", changeSection);
